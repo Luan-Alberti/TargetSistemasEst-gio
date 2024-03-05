@@ -8,3 +8,5 @@ while (K < INDICE) {
 }
 
 console.log(SOMA);
+
+// O valor da  variável SOMA será de 91
