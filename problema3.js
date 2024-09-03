@@ -1,24 +1,14 @@
-/*
+const faturamento = [1500, 1900, 0, 2800, 500, 0, 3200, 2100, 600, 1300, 100]; // Exemplo de dados
 
-3) Descubra a lógica e complete o próximo elemento:
+const faturamentoFiltrado = faturamento.filter(valor => valor > 0); // faturamentoFiltrado é um novo array que contém apenas os valores de faturamento que são maiores que zero. Isso é feito para ignorar dias sem faturamento na análise.
 
-a) 1, 3, 5, 7, ___
-Soma de 2+2, o próximo é 9
+const menorFaturamento = Math.min(...faturamentoFiltrado); // Retorna o menor valor dentro do array faturamentoFiltrado. A sintaxe ... (spread operator) é usada para expandir os elementos do array como argumentos individuais para Math.min.
+const maiorFaturamento = Math.max(...faturamentoFiltrado);
 
-b) 2, 4, 8, 16, 32, 64, ____
-Numero dobro do anterior, o próximo é 128
+const mediaMensal = faturamentoFiltrado.reduce((a, b) => a + b, 0) / faturamentoFiltrado.length; // Soma todos os valores do array faturamentoFiltrado e então é dividido pelo número de elementos em faturamentoFiltrado.length para calcular a média mensal.
 
-c) 0, 1, 4, 9, 16, 25, 36, ____
-Sequencia de um número começando em 0 elevado ao quadrado, o próximo é 49
+const diasAcimaDaMedia = faturamentoFiltrado.filter(valor => valor > mediaMensal).length; // Cria um novo array contendo apenas os dias em que o faturamento foi maior que a média mensal e .length retorna o número de elementos nesse novo array, representando o número de dias em que o faturamento foi superior à média.
 
-d) 4, 16, 36, 64, ____
-Quadrado de números pares concecutivos, o próximo é 100
-
-e) 1, 1, 2, 3, 5, 8, ____
-Sequência de Fibonacci., o próximo é 13
-
-f) 2, 10, 12, 16, 17, 18, 19, ____ 
-Não consigo achar uma lógica, peço que se possivel retornar a solução
-
-*/
-
+console.log(`Menor faturamento: ${menorFaturamento}`); // Exibe na tela o menor faturamento
+console.log(`Maior faturamento: ${maiorFaturamento}`); // Exibe na tela o maior faturamento
+console.log(`Dias acima da média: ${diasAcimaDaMedia}`); // Exibe na tela os dias que faturaram acima da média de faturamento
