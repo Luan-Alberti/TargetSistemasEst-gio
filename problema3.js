@@ -1,4 +1,4 @@
-const faturamento = [1500, 1900, 0, 2800, 500, 0, 3200, 2100, 600, 1300, 100]; // Exemplo de dados
+const faturamento = [1500, 1900, 0, 2800, 500, 0, 3200, 2100, 600, 1300, 100]; // Exemplo de dados, pois não havia arquivo json ou xml disponível como fonte dos dados do faturamento mensal;
 
 const faturamentoFiltrado = faturamento.filter(valor => valor > 0); // faturamentoFiltrado é um novo array que contém apenas os valores de faturamento que são maiores que zero. Isso é feito para ignorar dias sem faturamento na análise.
 
