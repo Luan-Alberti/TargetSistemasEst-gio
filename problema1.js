@@ -7,6 +7,4 @@ while (K < INDICE) {
     SOMA = SOMA + K;
 }
 
-console.log(SOMA);
-
-// O valor da  variável SOMA será de 91
+console.log(SOMA); // O valor será 91
