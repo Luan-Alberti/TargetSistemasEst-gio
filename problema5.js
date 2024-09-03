@@ -1,11 +1,13 @@
-function inverteString(str) { //função para inverter string
-    let stringInvertida = "";
+function inverteString(str) {
+  //função para inverter string
+  let stringInvertida = "";
 
-    for (let i = str.length - 1; i >= 0; i--) { // Percorre a string original do último caractere para o primeiro
-        stringInvertida += str[i];
-    }
+  for (let i = str.length - 1; i >= 0; i--) {
+    // Percorre a string original do último caractere para o primeiro
+    stringInvertida += str[i];
+  }
 
-    return stringInvertida; //retorna string invertida
+  return stringInvertida; //retorna string invertida
 }
 
 let stringOriginal = "exemplo"; // String que você deseja inverter, substitua por qualquer string desejada
